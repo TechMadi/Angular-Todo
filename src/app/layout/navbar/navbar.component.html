@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <span class="navbar-brand">My Todo App</span>
+  <button
+    class="navbar-toggler"
+    type="button"
+    aria-controls="navbarContent"
+    [attr.aria-expanded]="!collapsed"
+    aria-label="Toggle navigation"
+    (click)="collapsed = !collapsed"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-collapse" [class.collapse]="collapsed" id="navbarContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/todos/all']" role="button">
+          Todos
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/todos/new']" role="button"> New</a>
+      </li>
+    </ul>
+  </div>
+</nav>

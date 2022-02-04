@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card-header bg-primary">
+        <p class="text-white">Add a new todo</p>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="addTodo">
+          <div class="form-group">
+            <label for="" class="form-label">Task :</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="task"
+              formControlName="task"
+            />
+          </div>
+          <div class="form-group">
+            <label for="" class="form-label">Task description :</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="task Description"
+              formControlName="description"
+            />
+          </div>
+          <div class="form-group">
+            <label for="" class="form-label">Status :</label>
+            <select class="form-control" formControlName="status">
+              <option value="To Do">To Do</option>
+              <option value="Complete">Complete</option>
+              <option value="In Progress">In Progress</option>
+            </select>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-primary mb-2"
+            (click)="submitTodo(addTodo.value)"
+          >
+            Add Todo
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
